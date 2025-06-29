@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tiendas Digitales</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #64748b;
+      --accent: #f59e0b;
+      --background: #f8fafc;
+      --text: #1e293b;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --white: #ffffff;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      background-color: var(--white);
+      box-shadow: var(--shadow);
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      color: var(--primary);
+      font-size: 1.75rem;
+    }
+    .intro-section {
+      max-width: 800px;
+      margin: 2rem auto;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .intro-section h2 {
+      font-size: 1.5rem;
+      color: var(--primary-dark);
+      margin-bottom: 1rem;
+    }
+    .intro-section p {
+      color: var(--secondary);
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    .supermarkets-grid {
+      max-width: 1200px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+    .supermarket-card {
+      background-color: var(--white);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .supermarket-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    .supermarket-image {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .supermarket-content {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .supermarket-title {
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .supermarket-description {
+      color: var(--secondary);
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+    .supermarket-button {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+    .supermarket-button:hover {
+      background-color: var(--primary-dark);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: var(--text);
+      color: var(--white);
+      margin-top: 2rem;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      .intro-section h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Directorio de Tiendas Digitales</h1>
+  </header>
+
+  <section class="intro-section">
+    <h2>Conoce las mejores tiendas digitales de la zona</h2>
+    <p>
+      Aquí podrás encontrar diferentes opciones de tiendas y comercios para comprar lo que necesitas desde la comodidad de tu casa. Selecciona una para más información, promociones, horarios y productos.
+    </p>
+  </section>
+
+  <section class="supermarkets-grid">
+    <!-- Tarjeta Pizza Express -->
+    <div class="supermarket-card">
+      <img
+        src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&auto=format"
+        alt="Pizza Express"
+        class="supermarket-image"
+      />
+      <div class="supermarket-content">
+        <h3 class="supermarket-title">Pizza Express</h3>
+        <p class="supermarket-description">
+          Las mejores pizzas artesanales, hamburguesas gourmet y postres. ¡Haz tu pedido online y disfruta comida rápida de calidad!
+        </p>
+        <a href="https://example.com/pizza-express" class="supermarket-button" target="_blank">
+          Ir a tienda
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta Boutique Fashion -->
+    <div class="supermarket-card">
+      <img
+        src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600&auto=format"
+        alt="Boutique Fashion"
+        class="supermarket-image"
+      />
+      <div class="supermarket-content">
+        <h3 class="supermarket-title">Boutique Fashion</h3>
+        <p class="supermarket-description">
+          Ropa y accesorios de moda para todas las edades. Encuentra las últimas tendencias y compra online de forma segura.
+        </p>
+        <a href="https://example.com/boutique-fashion" class="supermarket-button" target="_blank">
+          Ir a tienda
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta Kiosko 24/7 -->
+    <div class="supermarket-card">
+      <img
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&auto=format"
+        alt="Kiosko 24/7"
+        class="supermarket-image"
+      />
+      <div class="supermarket-content">
+        <h3 class="supermarket-title">Kiosko 24/7</h3>
+        <p class="supermarket-description">
+          Snacks, bebidas, golosinas y recargas. ¡Tu kiosko de confianza ahora también online! Compra fácil y rápido.
+        </p>
+        <a href="https://example.com/kiosko-247" class="supermarket-button" target="_blank">
+          Ir a tienda
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta Perfumería Aroma -->
+    <div class="supermarket-card">
+      <img
+        src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=600&auto=format"
+        alt="Perfumería Aroma"
+        class="supermarket-image"
+      />
+      <div class="supermarket-content">
+        <h3 class="supermarket-title">Perfumería Aroma</h3>
+        <p class="supermarket-description">
+          Perfumes, cosméticos y cuidado personal. Descubre productos exclusivos y promociones especiales en nuestra tienda digital.
+        </p>
+        <a href="https://example.com/perfumeria-aroma" class="supermarket-button" target="_blank">
+          Ir a tienda
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta Librería Escolar -->
+    <div class="supermarket-card">
+      <img
+        src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&auto=format"
+        alt="Librería Escolar"
+        class="supermarket-image"
+      />
+      <div class="supermarket-content">
+        <h3 class="supermarket-title">Librería Escolar</h3>
+        <p class="supermarket-description">
+          Todo para la escuela y la oficina: útiles, libros y papelería. Haz tu pedido online y recíbelo en tu domicilio.
+        </p>
+        <a href="https://example.com/libreria-escolar" class="supermarket-button" target="_blank">
+          Ir a tienda
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta Verdulería La Huerta -->
+    <div class="supermarket-card">
+      <img
+        src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=600&auto=format"
+        alt="Verdulería La Huerta"
+        class="supermarket-image"
+      />
+      <div class="supermarket-content">
+        <h3 class="supermarket-title">Verdulería La Huerta</h3>
+        <p class="supermarket-description">
+          Frutas y verduras frescas todos los días. Pedí online y recibí en tu casa productos seleccionados de calidad.
+        </p>
+        <a href="https://example.com/verduleria-la-huerta" class="supermarket-button" target="_blank">
+          Ir a tienda
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta Pet Shop Mundo Animal -->
+    <div class="supermarket-card">
+      <img
+        src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=600&auto=format"
+        alt="Pet Shop Mundo Animal"
+        class="supermarket-image"
+      />
+      <div class="supermarket-content">
+        <h3 class="supermarket-title">Pet Shop Mundo Animal</h3>
+        <p class="supermarket-description">
+          Alimentos, accesorios y juguetes para mascotas. Todo lo que tu mejor amigo necesita, ahora online.
+        </p>
+        <a href="https://example.com/petshop-mundo-animal" class="supermarket-button" target="_blank">
+          Ir a tienda
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta Ferretería El Tornillo -->
+    <div class="supermarket-card">
+      <img
+        src="https://images.unsplash.com/photo-1464983953574-0892a716854b?w=600&auto=format"
+        alt="Ferretería El Tornillo"
+        class="supermarket-image"
+      />
+      <div class="supermarket-content">
+        <h3 class="supermarket-title">Ferretería El Tornillo</h3>
+        <p class="supermarket-description">
+          Herramientas, materiales y artículos para el hogar. Comprá online y recibí en tu domicilio.
+        </p>
+        <a href="https://example.com/ferreteria-el-tornillo" class="supermarket-button" target="_blank">
+          Ir a tienda
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta Panadería Dulce Hogar -->
+    <div class="supermarket-card">
+      <img
+        src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&auto=format"
+        alt="Panadería Dulce Hogar"
+        class="supermarket-image"
+      />
+      <div class="supermarket-content">
+        <h3 class="supermarket-title">Panadería Dulce Hogar</h3>
+        <p class="supermarket-description">
+          Panes, facturas y tortas recién horneadas. Hacé tu pedido online y disfrutá en casa.
+        </p>
+        <a href="https://example.com/panaderia-dulce-hogar" class="supermarket-button" target="_blank">
+          Ir a tienda
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Directorio de Tiendas Digitales. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
